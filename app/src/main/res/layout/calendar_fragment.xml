@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jsc5565.hiruashi.lucia.CalendarFragment">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/calender_refresh">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/calendar_upper"
+                    android:layout_height="@dimen/calendar_upper"
+                    android:id="@+id/before_month"
+                    android:src="@mipmap/left_arrow"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/calendar_upper"
+                    android:id="@+id/month_text"
+                    android:layout_centerHorizontal="true"/>
+                <ImageView
+                    android:layout_width="@dimen/calendar_upper"
+                    android:layout_height="@dimen/calendar_upper"
+                    android:id="@+id/after_month"
+                    android:src="@mipmap/right_arrow"
+                    android:layout_alignParentRight="true"
+                    />
+
+                <hiruashi.jsc5565.packingproject.Packing.PackRecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calenderview"
+                    android:layout_below="@+id/month_text"
+                    ></hiruashi.jsc5565.packingproject.Packing.PackRecyclerView>
+            </RelativeLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
